@@ -1,7 +1,7 @@
 # MERAKI_Academy_Project_5
 <p align="center">
 <a href="https://www.meraki-academy.org" target="_blank" rel="noopener noreferrer">
- <img width="400px" height="100px" src="./images/w" alt="Project logo">
+ <img width="400px" height="100px" src="./images/w.png" alt="Project logo">
  </a>
 </p>
 
@@ -77,25 +77,25 @@ Now app ready to use
 ## 🎈 Usage <a name="usage"></a>
 - you must register first
  or by google
- <img width="900px" height="900px" src="./images/reg" alt="Project logo">
+ <img width="900px" height="900px" src="./images/reg.png" alt="Project logo">
 2-login
 using your email or by google
-<img width="900px" height="900px" src="./images/log" alt="Project logo">
+<img width="900px" height="900px" src="./images/log.png" alt="Project logo">
 3-this is all pages 
-<img width="900px" height="900px" src="./images/1" alt="Project logo">
-<img width="900px" height="900px" src="./images/2" alt="Project logo">
+<img width="900px" height="900px" src="./images/1.png" alt="Project logo">
+<img width="900px" height="900px" src="./images/2.png" alt="Project logo">
 this for your profile
-<img width="900px" height="900px" src="./images/3" alt="Project logo">
+<img width="900px" height="900px" src="./images/3.png" alt="Project logo">
 in job page 
-<img width="900px" height="900px" src="./images/4" alt="Project logo">
+<img width="900px" height="900px" src="./images/4.png" alt="Project logo">
 if you press on any job
-<img width="900px" height="900px" src="./images/5" alt="Project logo">
+<img width="900px" height="900px" src="./images/5.png" alt="Project logo">
 press on appaly
-<img width="900px" height="900px" src="./images/6" alt="Project logo">
-this is your community post )people who share with you your field
-<img width="900px" height="900px" src="./images/8" alt="Project logo">
+<img width="900px" height="900px" src="./images/6.png" alt="Project logo">
+this is your community post people who share with you your field
+<img width="900px" height="900px" src="./images/.png" alt="Project logo">
 if you need any help just send for us your problem
-<img width="900px" height="900px" src="./images/9" alt="Project logo">
+<img width="900px" height="900px" src="./images/.png" alt="Project logo">
 you can update your info from here
 
 
