@@ -123,11 +123,11 @@ const Login = () => {
                 Create Account
               </button>
 
-              <div className="flex justify-center items-center mt-4 w-full h-8">
+             {/*  <div className="flex justify-center items-center mt-4 w-full h-8">
                 
                   <LoginGoogle/>
                 
-              </div>
+              </div> */}
             </div>
           </div>
 

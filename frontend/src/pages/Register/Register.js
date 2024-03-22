@@ -76,7 +76,7 @@ const Register = () => {
       });
       if (result.data.success) {
         setRegisterLoader(false);
-        navigate("/login");
+        navigate("/");
       } else throw Error;
     } catch (error) {
       if (error.response && error.response.data) {

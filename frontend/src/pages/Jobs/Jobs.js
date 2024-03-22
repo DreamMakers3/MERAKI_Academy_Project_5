@@ -57,62 +57,71 @@ const Jobs = () => {
   return (
     <div className="flex bg-zinc-200">
       <div className="w-2/5 border-e-2 border-gray-600">
-        {jobs?.map((job, index) => {
-          return (
-            <div
-              key={index}
-              onClick={() => {
-                setShowJob(true);
-                setJobId(job.job_id);
-              }}
-            >
-              <div class="">
-                <div class=" bg-zinc-200">
-                  <div className="">
-                    <div
-                      className="container mx-auto p-2 "
-                      style={{ width: "400px" }}
-                    >
+        {jobs.length === 0 ? (
+          <div
+            className="flex h-64 items-center justify-center"
+            style={{ width: "650px" }}
+          >
+            <div className="text-gray-500 text-2xl">"No Jobs Recently"</div>
+          </div>
+        ) : (
+          jobs?.map((job, index) => {
+            return (
+              <div
+                key={index}
+                onClick={() => {
+                  setShowJob(true);
+                  setJobId(job.job_id);
+                }}
+              >
+                <div class="">
+                  <div class=" bg-zinc-200">
+                    <div className="">
                       <div
-                        className="bg-white rounded-md shadow p-3"
+                        className="container mx-auto p-2 "
                         style={{ width: "400px" }}
                       >
-                        <div className="flex">
-                          <img
-                            src={job.profileimage}
-                            alt="Profile Picture"
-                            className="w-12 h-12 rounded-full object-cover cursor-pointer"
-                            onClick={() => {
-                              navigate(`/friend/${job.user_id}`);
-                            }}
-                          />
-                          <div className="ml-2">
-                            <p
-                              className="font-semibold cursor-pointer"
+                        <div
+                          className="bg-white rounded-md shadow p-3"
+                          style={{ width: "400px" }}
+                        >
+                          <div className="flex">
+                            <img
+                              src={job.profileimage}
+                              alt="Profile Picture"
+                              className="w-12 h-12 rounded-full object-cover cursor-pointer"
                               onClick={() => {
                                 navigate(`/friend/${job.user_id}`);
                               }}
-                            >
-                              {job.firstname} {job.lastname}
-                            </p>
+                            />
+                            <div className="ml-2">
+                              <p
+                                className="font-semibold cursor-pointer"
+                                onClick={() => {
+                                  navigate(`/friend/${job.user_id}`);
+                                }}
+                              >
+                                {job.firstname} {job.lastname}
+                              </p>
 
-                            {/*  <h6>Amman,Jordan(Onsite)</h6> */}
-                            <p className="text-gray-500 text-xs">
-                              {" "}
-                              Published{" "}
-                              {job.created_at
-                                .split("T")
-                                .shift()
-                                .split("-")
-                                .reverse()
-                                .join("-")}
-                            </p>
-                            <p className="font-medium mt-1 cursor-pointer">
-                              <span className="me-1 font-medium text-blue-600">
-                                Hiring:
-                              </span>
-                              {job.title}
-                            </p>
+                              {/*  <h6>Amman,Jordan(Onsite)</h6> */}
+                              <p className="text-gray-500 text-xs">
+                                {" "}
+                                Published{" "}
+                                {job.created_at
+                                  .split("T")
+                                  .shift()
+                                  .split("-")
+                                  .reverse()
+                                  .join("-")}
+                              </p>
+                              <p className="font-medium mt-1 cursor-pointer">
+                                <span className="me-1 font-medium text-blue-600">
+                                  Hiring:
+                                </span>
+                                {job.title}
+                              </p>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -120,9 +129,9 @@ const Jobs = () => {
                   </div>
                 </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })
+        )}
       </div>
       {/* =================    Form Job  Add (Email.Js here )  ======================== */}
       <div className="w-3/5">
@@ -146,11 +155,11 @@ const Jobs = () => {
                             </p>
                           </div>
 
-                          <div>
+                      {/*     <div>
                             <button className="bg-black rounded-md shadow-md w-20 h-8 text-white">
                               Follow
                             </button>
-                          </div>
+                          </div> */}
                         </div>
                         {/* ********** */}
                         <h2 className="text-2xl font-bold mt-3 mb-2">
@@ -186,15 +195,13 @@ const Jobs = () => {
                               APPLY Now
                             </button>
                           </div>
-                          <button className="bg-gray-500 w-24 h-10 rounded text-center text-white">Save Later</button>
-
+                          <button className="bg-gray-500 w-24 h-10 rounded text-center text-white">
+                            Save Later
+                          </button>
                         </div>
                         {aPPLY && (
                           <div id="myModal" class="modal2">
-                            <div
-                              className="modal-content2 "
-                              id="app"
-                            >
+                            <div className="modal-content2 " id="app">
                               <span
                                 className="close2"
                                 onClick={() => {
