@@ -6,7 +6,7 @@ import "./Register.css";
 
 const Register = () => {
   const navigate = useNavigate();
-   const dispatch =useDispatch()
+  const dispatch = useDispatch();
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [jobName, setJobName] = useState("");
@@ -59,21 +59,24 @@ const Register = () => {
   /* ============================================================= */
   const addNewUser = async () => {
     try {
-      const result = await axios.post("https://workedin.onrender.com/users/register", {
-        firstName,
-        lastName,
-        jobName,
-        country,
-        email,
-        password,
-        about,
-        CV,
-        phoneNumber,
-        skills,
-        education,
-        field_id,
-        role_id,
-      });
+      const result = await axios.post(
+        "https://workedin.onrender.com/users/register",
+        {
+          firstName,
+          lastName,
+          jobName,
+          country,
+          email,
+          password,
+          about,
+          CV,
+          phoneNumber,
+          skills,
+          education,
+          field_id,
+          role_id,
+        }
+      );
       if (result.data.success) {
         setRegisterLoader(false);
         navigate("/");
@@ -91,7 +94,9 @@ const Register = () => {
   /* ================================================================== */
   const getAllFields = async (e) => {
     try {
-      const result = await axios.get("https://workedin.onrender.com/roles/fields");
+      const result = await axios.get(
+        "https://workedin.onrender.com/roles/fields"
+      );
       if (result.data.success) {
         setAllFields(result.data.Fields);
       } else throw Error;
@@ -121,35 +126,35 @@ const Register = () => {
               <input
                 className="mb-2 w-64 h-10 border-2 border-slate-300 rounded-md pl-2.5 shadow-lg outline-none"
                 type="text"
-                placeholder="First Name"
+                placeholder="First Name**"
                 onChange={(e) => setFirstName(e.target.value)}
               />
               <br />
               <input
                 className="mb-2 w-64 h-10 border-2 border-slate-300 rounded-md pl-2.5 shadow-lg outline-none"
                 type="text"
-                placeholder="Last Name"
+                placeholder="Last Name**"
                 onChange={(e) => setLastName(e.target.value)}
               />
               <br />
               <input
                 className="mb-2 w-64 h-10 border-2 border-slate-300 rounded-md pl-2.5 shadow-lg outline-none"
                 type="text"
-                placeholder="PhoneNumber"
+                placeholder="PhoneNumber**"
                 onChange={(e) => setPhoneNumber(e.target.value)}
               />{" "}
               <br />
               <input
                 className="mb-2 w-64 h-10 border-2 border-slate-300 rounded-md pl-2.5 shadow-lg outline-none"
                 type="email"
-                placeholder="Email"
+                placeholder="Email**"
                 onChange={(e) => setEmail(e.target.value)}
               />
               <br />
               <input
                 className="mb-2 w-64 h-10 border-2 border-slate-300 rounded-md pl-2.5 shadow-lg outline-none"
                 type="password"
-                placeholder="Password"
+                placeholder="Password**"
                 onChange={(e) => setPassword(e.target.value)}
               />{" "}
               <br />
@@ -159,7 +164,7 @@ const Register = () => {
               <input
                 className="mb-2 w-64 h-10 border-2 border-slate-300 rounded-md pl-2.5 shadow-lg outline-none"
                 type="text"
-                placeholder="Country"
+                placeholder="Country**"
                 onChange={(e) => setCountry(e.target.value)}
               />{" "}
               <br />
@@ -185,8 +190,8 @@ const Register = () => {
               />
               <br />
               <div className="flex">
-                <p className="flex items-center w-40 h-10 bg-white border-2 border-slate-300 rounded-md pl-2.5 shadow-lg outline-none">
-                  Your Field{" "}
+                <p className="flex items-center w-40 h-10 bg-white border-2 border-slate-300 rounded-md pl-2.5 shadow-lg outline-none" style={{fontSize:"18px"}}>
+              Your Field  <span style={{fontSize:"12px"}}>"Guest? choose IT"</span>{" "}
                 </p>
                 <select
                   className="mb-2 w-24 h-10 border-2 border-slate-300 rounded-md pl-2.5 shadow-lg"
@@ -231,7 +236,7 @@ const Register = () => {
           </div>
           {/* ************************** Check if company ******************************************/}
           <div className="flex">
-            <p className="mb-2 text font-medium text-gray-900 dark:text-gray-300">
+            <p className="mb-2 text font-medium dark:text-gray-900">
               Company Account ?
             </p>
             <div className="flex items-center mb-3 ms-3">
@@ -248,7 +253,7 @@ const Register = () => {
               />
               <label
                 htmlFor="default-radio-1"
-                className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                className="ms-2 text-sm font-medium dark:text-gray-900"
               >
                 Yes
               </label>
@@ -266,7 +271,7 @@ const Register = () => {
               />
               <label
                 htmlFor="default-radio-2"
-                className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                className="ms-2 text-sm font-medium dark:text-gray-900"
               >
                 No
               </label>
