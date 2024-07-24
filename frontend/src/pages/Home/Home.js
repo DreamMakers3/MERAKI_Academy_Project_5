@@ -25,7 +25,7 @@ function Home() {
           </div>{" "}
         </div>
       ) : (
-        <div className="flex flex-row justify-around mt-5 bg-zinc-200">
+        <div className="flex flex-row justify-center space-x-4 mt-5 bg-zinc-200">
           <div className="">
             <HomeSide />
           </div>
