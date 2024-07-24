@@ -11,7 +11,7 @@ export default function MyApp() {
   return (
     <div>
       <Calendar
-        /*  onChange={onChange} value={value} */ className="bg-black text-center text-white w-72 rounded-md shadow-2xl p-3 rounded-t-none"
+        /*  onChange={onChange} value={value} */ className="bg-black text-center text-white w-60 rounded-md shadow-2xl p-3 rounded-t-none"
       />
     </div>
   );

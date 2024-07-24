@@ -114,11 +114,11 @@ const PuplishPost = () => {
   /* ========================================================= */
 
   return (
-    <div className="container relative" style={{ width: "650px" }}>
+    <div className="container relative" style={{ width: "600px" }}>
       {" "}
       <div
         className="bg-white border-2 shadow-md border-gray-200 rounded flex-col "
-        style={{ width: "650px" }}
+        style={{ width: "600px" }}
         onClick={() => {
           setModal(true);
           getAllFields();

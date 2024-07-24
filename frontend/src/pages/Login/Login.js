@@ -17,7 +17,6 @@ const Login = () => {
     return {
       token: state.log.token,
       userId: state.log.userId,
-      
     };
   });
 
@@ -30,10 +29,13 @@ const Login = () => {
   const login = async (e) => {
     e.preventDefault();
     try {
-      const result = await axios.post("https://workedin.onrender.com/users/login", {
-        email,
-        password,
-      });
+      const result = await axios.post(
+        "https://workedin.onrender.com/users/login",
+        {
+          email,
+          password,
+        }
+      );
       if (result.data) {
         {
           setLoginLoader(false);
@@ -105,6 +107,33 @@ const Login = () => {
               </form>
             </div>
 
+            <button
+              className=" mt-3 bg-slate-900 text-white w-64 h-10 border-2 rounded-md shadow-lg"
+              onClick={() => {
+                setLoginLoader(true);
+                axios
+                  .post("https://workedin.onrender.com/users/login", {
+                    email: "guest@gmail.com",
+                    password: "Guestaccount2024",
+                  })
+                  .then((result) => {
+                    setLoginLoader(false);
+                    dispatch(setLogin(result.data.token));
+                    dispatch(setUserId(result.data.user_id));
+                    dispatch(
+                      setPostURL("https://workedin.onrender.com/posts/search_2")
+                    );
+                  })
+                  .catch((error) => {
+                    console.log(error.response.data.message);
+                    setLoginLoader(false);
+                    return setMessage(error.response.data.message);
+                  });
+              }}
+            >
+              Login As Guest
+            </button>
+
             <div className="flex-col mt-2">
               <div className="flex justify-center items-center mb-2">
                 <div className="border-t-2 border-gray-600 w-24 h-0 p-0"></div>
@@ -121,7 +150,7 @@ const Login = () => {
                 Create Account
               </button>
 
-             {/*  <div className="flex justify-center items-center mt-4 w-full h-8">
+              {/*  <div className="flex justify-center items-center mt-4 w-full h-8">
                 
                   <LoginGoogle/>
                 
@@ -151,7 +180,11 @@ const Login = () => {
               id="myModal"
               className="modalLogin flex justify-center items-center pb-28"
             >
-              <div className="loaderLogin"></div>
+              <div className="message">
+                <p>Please wait a minute.. </p>
+                <p>If no response Refresh the page please</p>
+                <div className="loaderLogin"></div>
+              </div>
             </div>
           </>
         )}

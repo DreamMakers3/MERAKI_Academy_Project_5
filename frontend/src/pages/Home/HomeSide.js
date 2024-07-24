@@ -96,8 +96,8 @@ const HomeSide = () => {
   };
   // =========================================
   return (
-    <div className="flex flex-col space-y-6 items-center w-72 ">
-      <div className="  bg-white w-72 p-3 rounded-lg shadow-lg">
+    <div className="flex flex-col space-y-6 items-center w-60 ">
+      <div className="  bg-white w-60 p-3 rounded-lg shadow-lg">
         <div>
           <p className="font-medium text-center text-gray-500">Welcome</p>
         </div>

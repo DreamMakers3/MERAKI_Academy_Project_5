@@ -178,11 +178,11 @@ export const Post = () => {
             <div key={post.post_id} className="">
               <div
                 className="container mt-3 relative"
-                style={{ width: "650px" }}
+                style={{ width: "600px" }}
               >
                 <div
                   className="bg-white rounded-lg shadow p-4"
-                  style={{ width: "650px" }}
+                  style={{ width: "600px" }}
                 >
                   <div className=" flex justify-between">
                   <div className="flex items-center">
