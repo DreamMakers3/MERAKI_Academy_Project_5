@@ -181,7 +181,7 @@ const Login = () => {
               className="modalLogin flex justify-center items-center pb-28"
             >
               <div className="message">
-                <p>Please wait a minute.. </p>
+                <p>Please wait a while.. </p>
                 <p>If no response Refresh the page please</p>
                 <div className="loaderLogin"></div>
               </div>
