@@ -351,7 +351,7 @@ export const Post = () => {
       ) : noPosts ? (
         <div
           className="flex h-64 items-center justify-center"
-          style={{ width: "650px" }}
+          style={{ width: "600px" }}
         >
           <div className="text-gray-500 text-2xl">"No Posts Yet"</div>
         </div>
