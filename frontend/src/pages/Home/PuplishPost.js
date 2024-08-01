@@ -299,7 +299,7 @@ const PuplishPost = () => {
             <div key={post.post_id}>
               <div
                 className=" container mt-3 relative"
-                style={{ width: "650px" }}
+                style={{ width: "600px" }}
               >
                 <div className="bg-white rounded-lg shadow p-4">
                   <div className="flex items-center">
